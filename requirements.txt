@@ -1,0 +1,4 @@
+tqdm==4.19.4
+torch==0.3.0.post4
+numpy==1.13.3
+gensim==3.4.0
