@@ -21,3 +21,7 @@ At test time, we use beam search decoding with beam size set at 20. For rerankin
 Test command - Just add the following flags for testing the model. `-test -mmi -bms 50`
 
 To perform a sanity check on the model, train the model on a small subset of the dataset with the flag `-toy`. It should overfit with a training error of 0.5.
+
+To bootstrap the encoder with pretrained  word embeddings use `-embed` flag. You should have a embeddings text file in /data/embeddings folder.
+
+The default evaluation metric used is word perplexity. To evaluate the model on word embedding metrics, run the command `python metrics.py <ground_truth txt file> <model_output txt file> <pretrained word2vec embeddings binary>`. The word embedding based metric is done using the pretrained word2vec trained on Google news corpus. Download it from <href='https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM'> here</a> and place it in /data/embeddings folder.
