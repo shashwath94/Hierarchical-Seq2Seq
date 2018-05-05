@@ -14,7 +14,7 @@ For HRED model - `python3 train.py -n HRED -tf -bms 20 -bs 100 -e 80 -seshid 300
 
 For Bi-HRED + Language model objective (inverse sigmoid teacher forcing rate decay) - `python3 train.py -n BiHRED+LM -bi -lm -nl 2 -lr 0.0003 -e 80 -seshid 300 -uthid 300  -bs 10 -pt 3`
 
-For Bi-HRED + Language model objective (Ful teacher forcing) - python3 train.py -n model3 -nl 2 -bi -lm -drp 0.4 -e 25 -seshid 300 -uthid 300 -lr 0.0001 -bs 100 -tf
+For Bi-HRED + Language model objective (Ful teacher forcing) - `python3 train.py -n model3 -nl 2 -bi -lm -drp 0.4 -e 25 -seshid 300 -uthid 300 -lr 0.0001 -bs 100 -tf`
 
 At test time, we use beam search decoding with beam size set at 20. For reranking the candidates during beam search, we use the MMI Anit-LM following the method in <a href='https://arxiv.org/pdf/1510.03055.pdf'> paper </a>
 
