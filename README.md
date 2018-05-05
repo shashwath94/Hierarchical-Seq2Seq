@@ -17,3 +17,7 @@ For Bi-HRED + Language model objective (inverse sigmoid teacher forcing rate dec
 For Bi-HRED + Language model objective (Ful teacher forcing) - python3 train.py -n model3 -nl 2 -bi -lm -drp 0.4 -e 25 -seshid 300 -uthid 300 -lr 0.0001 -bs 100 -tf
 
 At test time, we use beam search decoding with beam size set at 20. For reranking the candidates during beam search, we use the MMI Anit-LM following the method in <a href='https://arxiv.org/pdf/1510.03055.pdf'> paper </a>
+
+Test command - Just add the following flags for testing the model. `-test -mmi -bms 50`
+
+To perform a sanity check on the model, train the model on a small subset of the dataset with the flag `-toy`. It should overfit with a training error of 0.5.
